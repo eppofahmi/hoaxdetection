@@ -60,5 +60,6 @@ df <- read.table("https://s3.amazonaws.com/assets.datacamp.com/blog_assets/test.
                  header = FALSE)
 df
 
-df <- read.delim("https://s3.amazonaws.com/assets.datacamp.com/blog_assets/test_delim.txt", sep="$")
+df <- read.delim("https://s3.amazonaws.com/assets.datacamp.com/blog_assets/test_delim.txt", 
+                 sep="$")
 df
