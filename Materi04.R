@@ -58,8 +58,12 @@ contoh_data$text <- replace_number(contoh_data$text)
 head(contoh_data$text)
 
 ## Tokenisasi: menggunakan fungsi unnest_token() dari tidytext
+library(tidytext)
 
 hasil_token <- contoh_data %>%
-  select(created_at, text) %>%
-  unnest_tokens(hsl_token, text, token = "ngrams", n = 2, drop = FALSE)
+  select(created_at, text_asli, text) %>%
+  unnest_tokens(hsl_token, text, token = "ngrams", n = 2)
 
+kata_populer <- hasil_token %>%
+  # group_by(created_at) %>%
+  count(hsl_token, sort = TRUE)
