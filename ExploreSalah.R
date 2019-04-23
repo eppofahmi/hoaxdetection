@@ -1,9 +1,10 @@
 # Skrip ini digunakan untuk mengeksplorasi postingan dari akun @TunrBackHoax yang mengandung term [SALAH] dari awal adanya akun hingga tanggal 20 April 2019. Data terdiri dari 14. 
 
 library(tidyverse)
+library(tidytext)
 
 # Data
-salah <- read_csv("raw_data/salah.csv", trim_ws = FALSE)
+salah <- read_csv("raw_data/infohoax.csv", trim_ws = FALSE)
 
 glimpse(salah)
 
