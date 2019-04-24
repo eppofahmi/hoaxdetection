@@ -1,5 +1,7 @@
 # Materi Hari ke-1
 
+## Membuat project di Rstudio
+
 ## Menulis dan menjalankan skrip ####
 
 sebuah_data <- "Ini sebuah data"

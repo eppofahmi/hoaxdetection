@@ -67,3 +67,7 @@ hasil_token <- contoh_data %>%
 kata_populer <- hasil_token %>%
   # group_by(created_at) %>%
   count(hsl_token, sort = TRUE)
+
+# install paket persiapan hari ke-2
+install.packages("caret")
+install.packages("tm")
