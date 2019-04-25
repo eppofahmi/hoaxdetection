@@ -1,3 +1,7 @@
+library(dplyr)
+library(tm)
+library(caret)
+
 #------
 # Import data
 data <- read.csv("sample.csv",sep = ";")
@@ -36,7 +40,6 @@ train_index <- caret::createDataPartition(dtm$label,p=train_ratio,list = FALSE)
 train <- dtm[train_index,]
 test <- dtm[-train_index,]
 
-
 #--------
 # Model fitting for training data
 #-------
@@ -46,7 +49,6 @@ modelfit <- caret::train(label ~ ., data=train,method="knn")
 # Save machine learning model
 readr::write_rds(modelfit,"modelfit.rds")
 #-------
-
 
 #-------
 # Testing
@@ -58,7 +60,6 @@ confmat$overall
 confmat$table
 confmat$byClass
 #-------
-
 
 #-------
 # Prediction
