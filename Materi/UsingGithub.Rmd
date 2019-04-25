@@ -9,3 +9,14 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+# Pendahuluan
+
+Sebelumnya, kita telah mendapatkan materi tentang cara menggunakan github. Selanjutnya di sini saya ingin menunjukkan cara untuk mem-*push* dan mem-*pull*. Syarat untuk bisa mengikuti tutorial yang ada disini adalah: 
+
+1. Sudah memiliki akun github
+2. Sudah memverifikasi akun github melalui email yang dikirim oleh github ke email yang digunakan untuk mendaftar. 
+3. Sudah di-*invite* ke repository ![hoaxdetection](https://github.com/eppofahmi/hoaxdetection). Jika anda belum diinvite dapat mengajukan permintaan melalui tautan https://github.com/eppofahmi/hoaxdetection/pulls.
+4. Jika anda menginginkan untuk berkontribusi tanpa perlu diinvite, maka anda bisa mem-*Fork* repository ini dengan menekan tombol `Fork`. 
+
+# Branching
+
