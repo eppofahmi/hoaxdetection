@@ -1,3 +1,7 @@
+library(dplyr)
+library(tm)
+library(caret)
+
 #------
 # Import data
 data <- read.csv("sample.csv",sep = ";")
