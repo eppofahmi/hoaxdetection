@@ -1,0 +1,71 @@
+---
+title: "Menggunakan github di Rstudio"
+author: "Ujang Fahmi"
+date: "4/26/2019"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Pendahuluan
+
+Sebelumnya, kita telah mendapatkan materi tentang cara menggunakan github. Selanjutnya di sini saya ingin menunjukkan cara untuk mem-*push* dan mem-*pull*. Syarat untuk bisa mengikuti tutorial yang ada disini adalah: 
+
+1. Sudah memiliki akun github
+2. Sudah memverifikasi akun github melalui email yang dikirim oleh github ke email yang digunakan untuk mendaftar. 
+3. Sudah di-*invite* ke repository [hoaxdetection](https://github.com/eppofahmi/hoaxdetection). Jika anda belum diinvite dapat mengajukan permintaan melalui tautan https://github.com/eppofahmi/hoaxdetection/pulls.
+4. Jika anda menginginkan untuk berkontribusi tanpa perlu diinvite, maka anda bisa mem-*Fork* repository ini dengan menekan tombol `Fork`. 
+
+# Branching
+
+Tahapan selanjutnya setelah anda memenuhi empat syarat sebelumnya adalah membuat branch yang dapat dibuat menggunakan salah satu cara berikut: 
+
+1. Membuatnya di laman repository github ([Membuat branh di github](https://github.com/eppofahmi/hoaxdetection)) dan mendownloadnya dengan menggunakan cara pembuatan project *version control*;
+2. Membuat branch dengan menggunakan Shell dengan cara menunju menu `Tools` > `Shell` di Rstudio yang akan membuka terminal atau command prompt anda. Setelah itu, kita bisa membuat branch dengan mengetikan `git checkout -b nama-branch`. 
+
+Branch memungkinkan Anda untuk menggandakan repositori yang ada, mengembangkan atau bereksperimen dengan fitur baru secara mandiri, dan jika Anda menyukai apa yang Anda lakukan, Anda dapat menggabungkan modifikasi ini kembali ke proyek utama. Branch merupakan mekanisme yang digunakan ketika Anda berkolaborasi dengan proyek-proyek eksternal (proyek-proyek yang tidak dibuat oleh Anda sendiri).
+
+Dalam konteks project yang sedang kita kerjakan, dengan membuat Branch berarti anada telah membuat repository (folder) Anda sendiri, di mana di sana anda bebas melakukan apa saja, tanpa memengaruhi folder utama yang dimiliki bersama. Jika anda sudah mantap dengan yang anda lakukan di folder/branch sendiri, dan ingin menggabungkannya dengan folder utama, Anda bisa mengajukan permintaan untuk digabungkan/`pull request`. 
+
+# Push
+
+Setelah berhasil membuat branch dengan tanda seperti dapat dilihat pada Figure 1 kita bisa mem-*push* atau mengunggahnya ke repository kita dengan cara:
+
+1. Pilih repository personal atau branch
+2. Pilih file yang akan diupload dengan mencentang kotaknya
+3. Tekan tombol `Commit`
+4. Tulis deskripsi hal yang di upload
+5. Tekan tombol `push`
+
+Untuk lebih lengkapnya, pada kolom git tekan tombol `Commit` dan ikut urutan pengerjaannya seperti dapat dilihat pada gambar Figure 2. Di mana setelah menekan tombol `commit` kita akan mendapai terdapat sebuah kotak dialog baru yang muncul. Di sini anda perlu memastikan hal apa yang akan diupload dan menjelaskannya dalam komentar. Setalah selesai kita bisa mem-*push*-nya ke reposeitory dan meminta untuk digabungkan. 
+
+```{r branch1, echo = FALSE, fig.align='center', out.width = '70%', fig.cap = "Branch yang berhasil dibuat"}
+library(knitr)
+knitr::include_graphics("/Users/ujangfahmi/Desktop/UJANG FAHMI/myeda/hoaxdetection/images/branch.png")
+```
+
+```{r branch2, echo = FALSE, fig.align='center', out.width = '70%', fig.cap = "Tahapan untuk mempush ke github dalam proyek bersama"}
+library(knitr)
+knitr::include_graphics("/Users/ujangfahmi/Desktop/UJANG FAHMI/myeda/hoaxdetection/images/branch2.png")
+```
+
+# Pull request
+
+Setelah, berhasil mem*push* file atau perubahan yang sudah kita lakukan ke branch personal selanjutnya kita bisa mengajukan perimntaan penggabungan ke kurator repository utama. Hal ini dilakukan agar orang lain bisa menggunakan atau mendapat manfaat dari hal yang kita buat, baik berupa file atau pun perubahan skrip. 
+
+Caranya adalah dengan membuka laman github repository bersama dan menujuk ke branches atau bisa langsung mengklik [**Tautan repository**](https://github.com/eppofahmi/hoaxdetection/branches) ini. Di laman tersebut, kita akan melihat daftar `branch` yang dibuat, lalu pilih branch milik sendiri dan klik `New Pull Request`.
+
+Dengan meng-*klik* tombol  `New Pull Request` kita akan dibawa ke halaman baru seperti dapat dilihat pada Figure 3. Isilah komentar, lalu tekan tombol hijau untuk mengajukan permintaan. 
+
+```{r git1, echo = FALSE, fig.align='center', out.width = '70%', fig.cap = "Tombol Permintaan menggabungkan"}
+library(knitr)
+knitr::include_graphics("/Users/ujangfahmi/Desktop/UJANG FAHMI/myeda/hoaxdetection/images/pulreq.png")
+```
+
+Setelah anda berhasil membuat permintaan tersebut, maka kurator/pemilik repository utama akan mendapat notifikasi dan memutuskan untuk menerima permintaan atau menolaknya dengan catatan. Pada tahap selanjutnya, jika sudah ada update yang akan dijelaskan oleh kurator baik melalui comment, ataupun readme yang lebih mudah dibaca, anda dapat melakaukan pull untuk mengupdate repository local anda agar sesuai dengan repository utama proyek. 
+
+# Pull
