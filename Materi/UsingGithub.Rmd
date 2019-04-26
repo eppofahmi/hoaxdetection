@@ -69,3 +69,5 @@ knitr::include_graphics("/Users/ujangfahmi/Desktop/UJANG FAHMI/myeda/hoaxdetecti
 Setelah anda berhasil membuat permintaan tersebut, maka kurator/pemilik repository utama akan mendapat notifikasi dan memutuskan untuk menerima permintaan atau menolaknya dengan catatan. Pada tahap selanjutnya, jika sudah ada update yang akan dijelaskan oleh kurator baik melalui comment, ataupun readme yang lebih mudah dibaca, anda dapat melakaukan pull untuk mengupdate repository local anda agar sesuai dengan repository utama proyek. 
 
 # Pull
+
+Pull digunakan untuk mengupdate repository lokal kita agar sesuai dengan repository master. Hal ini dapat dilakukan dengan cara terlebih dahulu meng-*commit* semua perubahan yang sudah kita buat. Dalam konteks ini, untuk memudahkan, para kurator proyek akan mengupdate dan melihat request setiap akhir pekan. Sehingga anda bisa mengupdate repository lokal setiap awal pekan (senin) setiap minggunya. Untuk mem-pull kita hanya perlu menekan tombol biru seperti yang terdapat pada **Figure 1**.
